@@ -25,7 +25,7 @@ export default function Form(props) {
                         onChange={props.handleChange}
                     /> 
                   </div>
-                  <button className ="btn btn-primary"  >Generate Meme</button>
+                  <button className ="btn btn-info"  >Choose Random Image</button>
 
                 </form>
 

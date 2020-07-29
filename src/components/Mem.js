@@ -7,8 +7,8 @@ export class Mem extends Component {
     constructor (){
         super()
         this.state = {
-            topText : '',
-            bottomText : '',
+            topText : 'Top Sample Text',
+            bottomText : 'Bottom sample text',
             randomImg : 'http://i.imgflip.com/1bij.jpg',
             allimg : []
         }
