@@ -9,6 +9,7 @@ body {
 
 header {
   height: 100px;
+  width: 100%;
   display: flex;
   align-items: center;
   background: #6441A5;  /* fallback for old browsers */
