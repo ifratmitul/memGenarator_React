@@ -1,4 +1,7 @@
 import React, { Component } from 'react'
+import Form from './Form'
+import Membody from './Membody'
+import { exportComponentAsJPEG, exportComponentAsPDF, exportComponentAsPNG } from "react-component-export-image";
 
 export class Mem extends Component {
     constructor (){
@@ -11,6 +14,8 @@ export class Mem extends Component {
         }
         this.handleChange = this.handleChange.bind(this)
         this.handleSubmit = this.handleSubmit.bind(this)
+        this.componentRef = React.createRef();
+
     }
     handleChange(event) {
         const {name, value} = event.target
@@ -40,37 +45,16 @@ export class Mem extends Component {
 
         return (
             <div>
-                <form className = "meme-form col-6" onSubmit = {this.handleSubmit}>
-                    <div className = 'row col-md-5'>
-                    <label>Enter Top text</label>
-                    <input
-                    type = "text"
-                    name = "topText"
-                    value =  {this.state.topText}
-                    placeholder="Top text"
-                    onChange = {this.handleChange}
-                    />
-                  </div>
-
-                  <div className = 'row col-md-5'>
-                    <label>Enter Bottom Text</label>
-                    <input 
-                        type="text"
-                        name="bottomText"
-                        placeholder="Bottom Text"
-                        value={this.state.bottomText}
-                        onChange={this.handleChange}
-                    /> 
-                  </div>
-                  <button className ="btn btn-primary"  >Generate Meme</button>
-
-                </form>
-                
-                <div className = "meme">
+                <Form data ={this.state} handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}/>                
+                {/* <div className = "meme">
                     <img src ={this.state.randomImg} alt = ""/>
                     <h2 className = 'top'>{this.state.topText}</h2>
                     <h2 className = 'bottom'>{this.state.bottomText}</h2>
-                </div>
+                </div> */}
+                <Membody data = {this.state} ref={this.componentRef}/>
+                <button className = 'btn btn-primary'onClick={() => exportComponentAsPNG(this.componentRef)}>
+                  Download Meme
+                </button>
                 
             </div>
         )
