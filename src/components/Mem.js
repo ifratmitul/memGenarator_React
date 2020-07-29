@@ -1,7 +1,8 @@
 import React, { Component } from 'react'
 import Form from './Form'
 import Membody from './Membody'
-import { exportComponentAsJPEG, exportComponentAsPDF, exportComponentAsPNG } from "react-component-export-image";
+import { exportComponentAsPNG } from "react-component-export-image";
+import Uploader from '../firebase/Uploader'
 
 export class Mem extends Component {
     constructor (){
@@ -45,7 +46,9 @@ export class Mem extends Component {
 
         return (
             <div>
-                <Form data ={this.state} handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}/>                
+                <Form data ={this.state} handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}/>   
+                <h3 className = "up">or upload your own Picture</h3>
+                <Uploader/>             
                 {/* <div className = "meme">
                     <img src ={this.state.randomImg} alt = ""/>
                     <h2 className = 'top'>{this.state.topText}</h2>

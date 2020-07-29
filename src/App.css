@@ -123,4 +123,15 @@ text-align: cen
   margin-right: auto;
   display: block;
   margin-top: 10px;
+  margin-bottom: 10px;
+}
+.up{
+  text-align: center;
+  display: block;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  text-decoration : 'line-through'
+
+  
+
 }

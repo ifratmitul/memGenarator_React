@@ -3,6 +3,7 @@ import React from 'react';
 import './App.css';
 import Header from './components/Header'
 import Mem from './components/Mem'
+
 class App extends React.Component {
   constructor(props) {
     super();
@@ -13,6 +14,7 @@ class App extends React.Component {
       <div className="App">
         <Header/>
         <Mem />
+
   
 
       </div>
