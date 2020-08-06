@@ -2,11 +2,12 @@ import React from 'react'
 
 export default function Form(props) {
     return (
-        <div>
+        <div className = "mem-form">
             <form className = "meme-form col-6" onSubmit = {props.handleSubmit}>
-                    <div className = 'row col-md-5'>
-                    <label>Enter Top text</label>
+                    <div className = 'form-group'>
+                    
                     <input
+                    className = "form-control"
                     type = "text"
                     name = "topText"
                     value =  {props.data.topText}
@@ -15,9 +16,10 @@ export default function Form(props) {
                     />
                   </div>
 
-                  <div className = 'row col-md-5'>
-                    <label>Enter Bottom Text</label>
+                  <div className = 'form-group'>
+
                     <input 
+                        className = "form-control"
                         type="text"
                         name="bottomText"
                         placeholder="Bottom Text"
@@ -25,7 +27,11 @@ export default function Form(props) {
                         onChange={props.handleChange}
                     /> 
                   </div>
-                  <button className ="btn btn-info"  >Choose Random Image</button>
+
+                  <div className = "form-group col-md-2">
+                  <button className =" btn btn-info"  >Choose Random Image</button>
+                  </div>
+
 
                 </form>
 

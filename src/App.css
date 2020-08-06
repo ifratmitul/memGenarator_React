@@ -7,15 +7,6 @@ body {
   background-color: whitesmoke;
 }
 
-header {
-  height: 100px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  background: #6441A5;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-}
 
 @media screen and (max-width: 1060px) {
   #primary { width:67%; }
@@ -24,7 +15,7 @@ header {
 
 /* Media Queries: Tabled Portrait */
 @media screen and (max-width: 768px) {
-  #primary { width:100%; }
+  img { width:30%; }
   #secondary { width:100%; margin:0; border:none; }
 }
 
@@ -39,6 +30,19 @@ header {
       content: attr(data-src-800px, url);
   }
 }
+header {
+  border : 2px solid red;
+  height: 100px;
+  grid-column: 1 / -1;
+  grid-area: h;
+  display: flex;
+  align-items: center;
+  background: #6441A5;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+
 header > img {
   height: 80%;
   margin-left: 10%;
@@ -52,9 +56,12 @@ header > p {
 }
 
 .meme {
+
   position: relative;
-  width: 90%;
+  grid-row: 1/-1;
   margin: auto;
+  border : 2px solid red;
+
 
 }
 
@@ -104,11 +111,13 @@ header > p {
   margin: 20px auto;
   display: flex;
   justify-content: space-between;
+  border: 2px solid blueviolet;
 }
 
 .meme-form > input {
-  width: 45%;
-  height: 40px;
+  width: 70%;
+  
+
 }
 
 .meme-form > button {
@@ -123,7 +132,8 @@ header > p {
 .meme-form > input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
 font-family: VT323, monospace;
 font-size: 25px;
-text-align: cen
+text-align: cen;
+
 }
 .meme-form > input::-moz-placeholder { /* Firefox 19+ */
 font-family: VT323, monospace;
@@ -140,20 +150,28 @@ font-family: VT323, monospace;
 font-size: 25px;
 text-align: cen
 }
-.btn{
+.but{
   margin-left: auto;
   margin-right: auto;
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
+  border : 2px solid, red;
 }
 .up{
   text-align: center;
   display: block;
   margin-top: 10px;
   margin-bottom: 10px;
-  text-decoration : 'line-through'
+  text-decoration : 'line-through';
+  border : 2px solid red;
 
-  
+  }
 
-}
+  .Container {
+    width: 90%;
+    max-width: 1000px;
+    border: 2px solid green;
+    margin : 0 auto;
+
+  }

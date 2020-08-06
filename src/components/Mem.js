@@ -45,7 +45,7 @@ export class Mem extends Component {
         
 
         return (
-            <div>
+            <div className = "Container">
                 <Form data ={this.state} handleChange = {this.handleChange} handleSubmit = {this.handleSubmit}/>   
                 <h3 className = "up">or upload your own Picture</h3>
                 <Uploader/>             
@@ -55,7 +55,7 @@ export class Mem extends Component {
                     <h2 className = 'bottom'>{this.state.bottomText}</h2>
                 </div> */}
                 <Membody data = {this.state} ref={this.componentRef}/>
-                <button className = 'btn btn-primary'onClick={() => exportComponentAsPNG(this.componentRef)}>
+                <button className = 'but btn btn-primary'onClick={() => exportComponentAsPNG(this.componentRef)}>
                   Download Meme
                 </button>
                 

@@ -46,7 +46,7 @@ class Uploader extends Component {
  
   render() {
     return (
-      <div className ="btn">
+      <div className ="up">
         <form >
           
           
